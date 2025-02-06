@@ -7,6 +7,7 @@ de que realmente tenga la enfermedad? Escriba las listas en Python de las probab
  y resuelva el problema
 """
 #Abby Donis 22440
+#Eliazar Canastuj 23384
 #
 
 #Teorema de bayes
@@ -34,3 +35,16 @@ probD_B = 1-probC_B #P(D|B)
 
 #Probabilidad total de obtener un resultado positivo
 probTotal = probC_A*probA + probC_B*probB
+
+
+probA_C = (probC_A * probA) / probTotal #P(A|C)
+
+# Mostrar probabilidades respectivas
+print(f"Probabilidad de tener la enfermedad: ", probA)
+print(f"Probabilidad de no tener la enfermedad: ", probB)
+print(f"Probabilidad de prueba positiva si se tiene la enfermedad: ", probC_A)
+print(f"Probabilidad de falso positivo: ", probC_B)
+print(f"Probabilidad total de resultado positivo: ", probTotal)
+
+# Mostrar resultado final
+print("\nProbabilidad de tener la enfermedad dado que la prueba fue positiva: ", probA_C)
